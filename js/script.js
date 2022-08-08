@@ -9,6 +9,13 @@ const addTask = event => {
      */
     event.preventDefault();
     let name = document.querySelector('.new-task-field').value
+
+    //check if the input is empty
+    if (name === '') {
+        alert('Task Name can\'t be empty!');
+        return;
+    }
+
     let taskItem = document.createElement('li');
 
     taskItem.classList.add('task');
